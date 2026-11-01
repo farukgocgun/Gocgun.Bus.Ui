@@ -14,7 +14,7 @@ First run: the console prints a one-time setup token. `/Setup` needs it; it is n
 
 Contract assemblies load only from below `Diagnostics:ContractRoot`; without it loading is refused. A folder that passes through a symbolic link or junction below the root is refused, and linked `.dll` files are skipped.
 
-License: AGPL-3.0-only (`LICENSE`). Copyright holder exception: `LICENSE-EXCEPTION`.
+License: MIT (`LICENSE`).
 
 ```bash
 dotnet run --project src/Gocgun.Bus.Ui/Gocgun.Bus.Ui.csproj

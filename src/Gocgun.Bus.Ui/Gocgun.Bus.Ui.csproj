@@ -4,7 +4,7 @@
     <AssemblyName>gocgun-bus-ui</AssemblyName>
     <IsPackable>true</IsPackable>
     <PackageId>Gocgun.Bus.Ui</PackageId>
-    <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>Read-only RabbitMQ diagnostic UI for protobuf bus messages.</Description>
     <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
   </PropertyGroup>
