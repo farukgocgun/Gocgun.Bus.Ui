@@ -1,0 +1,20 @@
+﻿@page
+@model Gocgun.Bus.Ui.Pages.QueueModel
+@{
+  ViewData["Title"] = "Queue";
+}
+<h1>Queue</h1>
+<p>Passive declare checks that the name exists and returns the message count.</p>
+@if (Model.Error is not null)
+{
+  <p class="error" role="alert">@Model.Error</p>
+}
+<form method="post">
+  <label for="queue">Queue name</label>
+  <input id="queue" name="Queue" value="@Model.Queue" required />
+  <button type="submit">Check</button>
+</form>
+@if (Model.Count is not null)
+{
+  <p>Messages @Model.Count</p>
+}

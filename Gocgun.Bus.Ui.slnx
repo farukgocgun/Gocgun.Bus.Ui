@@ -1,0 +1,7 @@
+﻿<Solution>
+  <Project Path="src/Gocgun.Bus.Ui/Gocgun.Bus.Ui.csproj" />
+  <Project Path="tests/Gocgun.Bus.Ui.Tests/Gocgun.Bus.Ui.Tests.csproj" />
+  <Project Path="../Gocgun.Diagnostics.Shared/Gocgun.Diagnostics.Shared.csproj" />
+  <Project Path="../Gocgun.Diagnostics.Shared/tests/Gocgun.Diagnostics.Shared.Tests/Gocgun.Diagnostics.Shared.Tests.csproj" />
+  <Project Path="../Gocgun.Diagnostics.Shared/tests/Gocgun.Diagnostics.Shared.TestContracts/Gocgun.Diagnostics.Shared.TestContracts.csproj" />
+</Solution>

@@ -1,0 +1,23 @@
+﻿@page
+@model Gocgun.Bus.Ui.Pages.PeekModel
+@{
+  ViewData["Title"] = "Peek";
+}
+<h1>Peek</h1>
+<p class="warn">basic.get then basic.reject with requeue. The message returns with redelivered set. On a quorum queue this can raise the delivery count toward x-delivery-limit. The head message is the oldest. Confirm before peeking a live queue.</p>
+@if (Model.Error is not null)
+{
+  <p class="error" role="alert">@Model.Error</p>
+}
+<form method="post">
+  <label for="queue">Queue name</label>
+  <input id="queue" name="Queue" value="@Model.Queue" required />
+  <label for="tenant">Tenant filter</label>
+  <input id="tenant" name="Tenant" value="@Model.Tenant" />
+  <label for="confirm"><input id="confirm" name="ConfirmLive" type="checkbox" value="yes" /> I understand the requeue side effects</label>
+  <button type="submit">Peek head</button>
+</form>
+@if (!string.IsNullOrEmpty(Model.Display))
+{
+  <pre>@Model.Display</pre>
+}

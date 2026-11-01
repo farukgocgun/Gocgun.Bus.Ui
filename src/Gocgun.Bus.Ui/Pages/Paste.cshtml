@@ -1,0 +1,28 @@
+﻿@page
+@model Gocgun.Bus.Ui.Pages.PasteModel
+@{
+  ViewData["Title"] = "Paste";
+}
+<h1>Paste</h1>
+<p>Decode a management-UI base64 body. This does not touch a queue.</p>
+@if (Model.Error is not null)
+{
+  <p class="error" role="alert">@Model.Error</p>
+}
+<form method="post">
+  <label for="body">Base64 body</label>
+  <textarea id="body" name="Body" rows="8">@Model.Body</textarea>
+  <label for="type">Contract override</label>
+  <input id="type" name="TypeOverride" value="@Model.TypeOverride" />
+  <label for="headers">AMQP headers, one name=value per line</label>
+  <textarea id="headers" name="HeaderText" rows="4">@Model.HeaderText</textarea>
+  <label for="folder">Contract assembly folder</label>
+  <input id="folder" name="Folder" value="@Model.Folder" />
+  <label for="tenant">Tenant filter</label>
+  <input id="tenant" name="Tenant" value="@Model.Tenant" />
+  <button type="submit">Decode</button>
+</form>
+@if (!string.IsNullOrEmpty(Model.Display))
+{
+  <pre>@Model.Display</pre>
+}
