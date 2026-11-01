@@ -125,7 +125,7 @@ public sealed class BusUiTests
         Assert.Contains("orders.dlq", audit, StringComparison.Ordinal);
         Assert.DoesNotContain("PAYLOADSECRET", audit, StringComparison.Ordinal);
         Assert.DoesNotContain("AMQPPASSWORD", audit, StringComparison.Ordinal);
-        Assert.Contains("AGPL-3.0-only", await File.ReadAllTextAsync(FindUp("Gocgun.Bus.Ui.csproj")), StringComparison.Ordinal);
+        Assert.Contains("MIT", await File.ReadAllTextAsync(FindUp("Gocgun.Bus.Ui.csproj")), StringComparison.Ordinal);
     }
 
     [Fact]
